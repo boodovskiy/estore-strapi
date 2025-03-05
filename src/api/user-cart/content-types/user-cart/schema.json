@@ -4,7 +4,8 @@
   "info": {
     "singularName": "user-cart",
     "pluralName": "user-carts",
-    "displayName": "User Cart"
+    "displayName": "User Cart",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,9 +25,9 @@
     },
     "users_permissions_user": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "user_cart"
+      "inversedBy": "user_carts"
     }
   }
 }

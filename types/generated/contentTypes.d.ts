@@ -479,6 +479,7 @@ export interface ApiSliderSlider extends Struct.CollectionTypeSchema {
 export interface ApiUserCartUserCart extends Struct.CollectionTypeSchema {
   collectionName: 'user_carts';
   info: {
+    description: '';
     displayName: 'User Cart';
     pluralName: 'user-carts';
     singularName: 'user-cart';
@@ -504,7 +505,7 @@ export interface ApiUserCartUserCart extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     users_permissions_user: Schema.Attribute.Relation<
-      'oneToOne',
+      'manyToOne',
       'plugin::users-permissions.user'
     >;
   };
@@ -1000,8 +1001,8 @@ export interface PluginUsersPermissionsUser
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    user_cart: Schema.Attribute.Relation<
-      'oneToOne',
+    user_carts: Schema.Attribute.Relation<
+      'oneToMany',
       'api::user-cart.user-cart'
     >;
     username: Schema.Attribute.String &
