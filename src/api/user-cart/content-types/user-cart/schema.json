@@ -27,7 +27,8 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "user_carts"
+      "inversedBy": "user_carts",
+      "onDelete": "cascade"
     },
     "userId": {
       "type": "integer"

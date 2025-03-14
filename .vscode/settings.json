@@ -1,0 +1,39 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "192.168.99.100",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Accolad Backend App",
+            "database": "mydb",
+            "username": "johndoe",
+            "password": "randompassword"
+        },
+        {
+            "previewLimit": 50,
+            "server": "accolad-prod.cluster-c3fuwinvl1ei.ca-central-1.rds.amazonaws.com",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "Accolad AWS Backend App",
+            "database": "accolad_prod",
+            "username": "accolad_prod"
+        },
+        {
+            "pgOptions": {
+                "ssl": {
+                    "rejectUnauthorized": true
+                }
+            },
+            "previewLimit": 50,
+            "server": "pg-cumqlg5svqrc73fjtjkg-a.frankfurt-postgres.render.com",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Grocery Store ",
+            "database": "grocerystore_xopr",
+            "username": "grocerystore",
+            "password": "wwNOnyUioQ8PYndbC4AbATB97B78w8Ri"
+        }
+    ]
+}
