@@ -404,6 +404,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
 export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
   collectionName: 'orders';
   info: {
+    description: '';
     displayName: 'Order';
     pluralName: 'orders';
     singularName: 'order';
@@ -424,6 +425,8 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
       'ordered-item.ordered-item',
       true
     >;
+    orderStatus: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Pending'>;
     paymentId: Schema.Attribute.String;
     phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
