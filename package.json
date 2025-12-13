@@ -30,5 +30,8 @@
   },
   "strapi": {
     "uuid": "ad2bd449-5079-43f1-9e54-8bb7f9e9c16e"
+  },
+  "overrides": {
+    "koa": "2.15.4"
   }
 }
